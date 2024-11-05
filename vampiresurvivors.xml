@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Game>
+    <Title>Vampire Survivors</Title>
+    <Developer>Poncle</Developer>
+    <Description>Un juego roguelike de supervivencia donde los jugadores enfrentan oleadas interminables de monstruos. La misión es sobrevivir el mayor tiempo posible mientras se recolectan habilidades y mejoras.</Description>
+    <ReleaseDate>2021-10-20</ReleaseDate>
+    <Platforms>
+        <Platform>PC</Platform>
+        <Platform>Xbox</Platform>
+        <Platform>Android</Platform>
+        <Platform>iOS</Platform>
+    </Platforms>
+    <Genres>
+        <Genre>Acción</Genre>
+        <Genre>Roguelike</Genre>
+        <Genre>Supervivencia</Genre>
+    </Genres>
+    <Characters>
+        <Character>
+            <Name>Antonio</Name>
+            <Description>Un cazador de vampiros armado con un látigo que aumenta su daño a medida que sube de nivel.</Description>
+            <StartingWeapon>Látigo</StartingWeapon>
+        </Character>
+        <Character>
+            <Name>Imelda</Name>
+            <Description>Un hechicera con habilidades mágicas, que empieza con una varita mágica y mejora la experiencia ganada.</Description>
+            <StartingWeapon>Varita mágica</StartingWeapon>
+        </Character>
+        <Character>
+            <Name>Poe</Name>
+            <Description>Un anciano alquimista, inicia con el ajo como arma y tiene una mayor recuperación de vida.</Description>
+            <StartingWeapon>Ajo</StartingWeapon>
+        </Character>
+        <!-- Se pueden añadir más personajes según sea necesario -->
+    </Characters>
+    <Abilities>
+        <Ability>
+            <Name>Látigo</Name>
+            <Description>Un arma cuerpo a cuerpo que golpea en un área frente al personaje, con mejoras de alcance y daño.</Description>
+            <Effect>Aumenta el daño con cada mejora.</Effect>
+        </Ability>
+        <Ability>
+            <Name>Varita mágica</Name>
+            <Description>Dispara automáticamente al enemigo más cercano.</Description>
+            <Effect>Aumenta la velocidad de disparo y el número de proyectiles.</Effect>
+        </Ability>
+        <Ability>
+            <Name>Ajo</Name>
+            <Description>Crea un aura de daño que afecta a los enemigos cercanos.</Description>
+            <Effect>Aumenta el radio y el daño con cada mejora.</Effect>
+        </Ability>
+        <!-- Se pueden añadir más habilidades según sea necesario -->
+    </Abilities>
+</Game>
