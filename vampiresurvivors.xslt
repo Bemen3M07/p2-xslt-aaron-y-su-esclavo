@@ -1,99 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="html" encoding="UTF-8" />
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="html" encoding="UTF-8" indent="yes" />
 
     <xsl:template match="/">
         <html>
             <head>
-                <title><xsl:value-of select="Game/Title" /></title>
+                <title>Game Information</title>
+                <style>
+                    body { font-family: Arial, sans-serif; color: #333; }
+                    h1, h2, h3 { color: #003366; }
+                    .section { margin: 20px 0; }
+                    .character, .ability { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; }
+                    .character h3, .ability h3 { margin: 0; color: #003366; }
+                </style>
             </head>
             <body>
                 <h1><xsl:value-of select="Game/Title" /></h1>
-                <h3>Desarrollador: <xsl:value-of select="Game/Developer" /></h3>
-                <p><xsl:value-of select="Game/Description" /></p>
-                <p>Fecha de lanzamiento: <xsl:value-of select="Game/ReleaseDate" /></p>
+                <p><strong>Desarrollador:</strong> <xsl:value-of select="Game/Developer" /></p>
+                <p><strong>Descripción:</strong> <xsl:value-of select="Game/Description" /></p>
+                <p><strong>Fecha de Lanzamiento:</strong> <xsl:value-of select="Game/ReleaseDate" /></p>
 
-                <h2>Plataformas</h2>
-                <ul>
-                    <xsl:for-each select="Game/Platforms/Platform">
-                        <li><xsl:value-of select="." /></li>
+                <!-- Platforms -->
+                <div class="section">
+                    <h2>Plataformas</h2>
+                    <ul>
+                        <xsl:for-each select="Game/Platforms/Platform">
+                            <li><xsl:value-of select="." /></li>
+                        </xsl:for-each>
+                    </ul>
+                </div>
+
+                <!-- Genres -->
+                <div class="section">
+                    <h2>Géneros</h2>
+                    <ul>
+                        <xsl:for-each select="Game/Genres/Genre">
+                            <li><xsl:value-of select="." /></li>
+                        </xsl:for-each>
+                    </ul>
+                </div>
+
+                <!-- Characters -->
+                <div class="section">
+                    <h2>Personajes</h2>
+                    <xsl:for-each select="Game/Characters/Character">
+                        <div class="character">
+                            <h3><xsl:value-of select="Name" /></h3>
+                            <p><strong>Descripción:</strong> <xsl:value-of select="Description" /></p>
+                            <p><strong>Arma Inicial:</strong> <xsl:value-of select="StartingWeapon" /></p>
+                        </div>
                     </xsl:for-each>
-                </ul>
+                </div>
 
-                <h2>Géneros</h2>
-                <ul>
-                    <xsl:for-each select="Game/Genres/Genre">
-                        <li><xsl:value-of select="." /></li>
+                <!-- Abilities -->
+                <div class="section">
+                    <h2>Habilidades</h2>
+                    <xsl:for-each select="Game/Abilities/Ability">
+                        <div class="ability">
+                            <h3><xsl:value-of select="Name" /></h3>
+                            <p><strong>Descripción:</strong> <xsl:value-of select="Description" /></p>
+                            <p><strong>Efecto:</strong> <xsl:value-of select="Effect" /></p>
+                        </div>
                     </xsl:for-each>
-                </ul>
-
-                <h2>Personajes</h2>
-                <xsl:for-each select="Game/Characters/Character">
-                    <div style="margin-bottom: 15px;">
-                        <h3><xsl:value-of select="Name" /></h3>
-                        <p><xsl:value-of select="Description" /></p>
-                        <p>Arma inicial: <xsl:value-of select="StartingWeapon" /></p>
-                    </div>
-                </xsl:for-each>
-
-                <h2>Habilidades</h2>
-                <xsl:for-each select="Game/Abilities/Ability">
-                    <div style="margin-bottom: 15px;">
-                        <h3><xsl:value-of select="Name" /></h3>
-                        <p><xsl:value-of select="Description" /></p>
-                        <p>Efecto: <xsl:value-of select="Effect" /></p>
-                    </div>
-                </xsl:for-each>
-            </body>
-        </html>
-    </xsl:template>
-</xsl:stylesheet>
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="html" encoding="UTF-8" />
-
-    <xsl:template match="/">
-        <html>
-            <head>
-                <title><xsl:value-of select="Game/Title" /></title>
-            </head>
-            <body>
-                <h1><xsl:value-of select="Game/Title" /></h1>
-                <h3>Desarrollador: <xsl:value-of select="Game/Developer" /></h3>
-                <p><xsl:value-of select="Game/Description" /></p>
-                <p>Fecha de lanzamiento: <xsl:value-of select="Game/ReleaseDate" /></p>
-
-                <h2>Plataformas</h2>
-                <ul>
-                    <xsl:for-each select="Game/Platforms/Platform">
-                        <li><xsl:value-of select="." /></li>
-                    </xsl:for-each>
-                </ul>
-
-                <h2>Géneros</h2>
-                <ul>
-                    <xsl:for-each select="Game/Genres/Genre">
-                        <li><xsl:value-of select="." /></li>
-                    </xsl:for-each>
-                </ul>
-
-                <h2>Personajes</h2>
-                <xsl:for-each select="Game/Characters/Character">
-                    <div style="margin-bottom: 15px;">
-                        <h3><xsl:value-of select="Name" /></h3>
-                        <p><xsl:value-of select="Description" /></p>
-                        <p>Arma inicial: <xsl:value-of select="StartingWeapon" /></p>
-                    </div>
-                </xsl:for-each>
-
-                <h2>Habilidades</h2>
-                <xsl:for-each select="Game/Abilities/Ability">
-                    <div style="margin-bottom: 15px;">
-                        <h3><xsl:value-of select="Name" /></h3>
-                        <p><xsl:value-of select="Description" /></p>
-                        <p>Efecto: <xsl:value-of select="Effect" /></p>
-                    </div>
-                </xsl:for-each>
+                </div>
             </body>
         </html>
     </xsl:template>
