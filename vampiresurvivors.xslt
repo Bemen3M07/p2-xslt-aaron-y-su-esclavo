@@ -7,8 +7,8 @@
             <head>
                 <title>Game Information</title>
                 <style>
-                    body { font-family: Arial, sans-serif; color: #333; }
-                    h1, h2, h3 { color: #003366; }
+                    body { font-family: Arial, sans-serif; color: #333; background-color: #f14747 }
+                    h1, h2, h3 { color: #f1e247; }
                     .section { margin: 20px 0; }
                     .character, .ability { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; }
                     .character h3, .ability h3 { margin: 0; color: #003366; }
@@ -47,9 +47,27 @@
     max-width: 24px; /* Tamaño máximo de íconos para evitar que crezcan demasiado */
     height: auto; /* Mantener proporción */
 }
+   /* Estilos del header */
+    #header {
+        background-color: #000; /* Color de fondo negro */
+       
+        padding: 2% 0; /* Espacio interno en porcentaje */
+        text-align: center; /* Centra el contenido */
+        font-family: Arial, sans-serif; /* Tipografía */
+    }
+
+    #header h1 {
+         color: #ffff; /* Color de texto blanco */
+        font-size: 2em; /* Tamaño de fuente escalable */
+        margin: 0; /* Eliminar margen superior e inferior */
+    }
                 </style>
             </head>
             <body>
+            <header id="header">
+            <h1>VAMPIRE SURVIVORS</h1>
+            </header>
+             <img src="bannervampire.png" alt="banner vampire survivors">
                 <h1><xsl:value-of select="Game/Title" /></h1>
                 <p><strong>Desarrollador:</strong> <xsl:value-of select="Game/Developer" /></p>
                 <p><strong>Descripción:</strong> <xsl:value-of select="Game/Description" /></p>
