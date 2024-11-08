@@ -22,16 +22,20 @@
             <Name>Antonio</Name>
             <Description>Un cazador de vampiros armado con un látigo que aumenta su daño a medida que sube de nivel.</Description>
             <StartingWeapon>Látigo</StartingWeapon>
+            <Imagen name="Antonio" image="antonio.png"/>
+
         </Character>
         <Character>
             <Name>Imelda</Name>
             <Description>Un hechicera con habilidades mágicas, que empieza con una varita mágica y mejora la experiencia ganada.</Description>
             <StartingWeapon>Varita mágica</StartingWeapon>
+            <Imagen name="imelda" image="imelda.png"/>
         </Character>
         <Character>
             <Name>Poe</Name>
             <Description>Un anciano alquimista, inicia con el ajo como arma y tiene una mayor recuperación de vida.</Description>
             <StartingWeapon>Ajo</StartingWeapon>
+            <Imagen name="poe" image="poe.png"/>
         </Character>
         <!-- Se pueden añadir más personajes según sea necesario -->
     </Characters>
@@ -40,17 +44,23 @@
             <Name>Látigo</Name>
             <Description>Un arma cuerpo a cuerpo que golpea en un área frente al personaje, con mejoras de alcance y daño.</Description>
             <Effect>Aumenta el daño con cada mejora.</Effect>
+            <Imagen name="latigo" image="latigo.png"/>
         </Ability>
         <Ability>
             <Name>Varita mágica</Name>
             <Description>Dispara automáticamente al enemigo más cercano.</Description>
             <Effect>Aumenta la velocidad de disparo y el número de proyectiles.</Effect>
+            <Imagen name="varita" image="varita.png"/>
         </Ability>
         <Ability>
             <Name>Ajo</Name>
             <Description>Crea un aura de daño que afecta a los enemigos cercanos.</Description>
             <Effect>Aumenta el radio y el daño con cada mejora.</Effect>
+            <Imagen name="ajo" image="ajo.png"/>
         </Ability>
         <!-- Se pueden añadir más habilidades según sea necesario -->
     </Abilities>
+    <Imagenes>
+        <Imagen name="Imagen1" image="bannervampire.png"/>
+    </Imagenes>
 </Game>
