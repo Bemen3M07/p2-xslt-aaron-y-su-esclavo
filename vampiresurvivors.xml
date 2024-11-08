@@ -1,86 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Indicamos que este documento es un archivo XML y especificamos la codificación de caracteres (UTF-8). -->
+
 <?xml-stylesheet type="text/xsl" href="vampiresurvivors.xslt"?>
+<!-- Vincula un archivo XSLT (vampiresurvivors.xslt) que transformará este XML en una presentación HTML. -->
+<!-- El XSLT es un lenguaje para transformar documentos XML en otros formatos, como HTML. -->
 
 <Game>
-    <Title>Vampire Survivors</Title>
-    <Developer>Poncle</Developer>
-    <Description>Un juego roguelike de supervivencia donde los jugadores enfrentan oleadas interminables de monstruos. La misión es sobrevivir el mayor tiempo posible mientras se recolectan habilidades y mejoras.</Description>
-    <ReleaseDate>2021-10-20</ReleaseDate>
-    <Platforms>
-        <Platform>PC</Platform>
-        <Platform>Xbox</Platform>
-        <Platform>Android</Platform>
-        <Platform>iOS</Platform>
-    </Platforms>
-    <Genres>
-        <Genre>Acción</Genre>
-        <Genre>Roguelike</Genre>
-        <Genre>Supervivencia</Genre>
-    </Genres>
-    <Characters>
-        <Character>
-            <Name>Antonio</Name>
-            <Description>Un cazador de vampiros armado con un látigo que aumenta su daño a medida que sube de nivel.</Description>
-            <StartingWeapon>Látigo</StartingWeapon>
-            <Imagen name="Antonio" image="antonio.png"/>
+    <!-- Comienza el nodo raíz <Game> que agrupa toda la información del juego. -->
 
-        </Character>
+    <Title>Vampire Survivors</Title>
+    <!-- Título del juego. Especifica el nombre del juego. -->
+    
+    <Developer>Poncle</Developer>
+    <!-- El desarrollador del juego. En este caso, "Poncle". -->
+
+    <Description>Un juego roguelike de supervivencia donde los jugadores enfrentan oleadas interminables de monstruos. La misión es sobrevivir el mayor tiempo posible mientras se recolectan habilidades y mejoras.</Description>
+    <!-- Descripción del juego, proporcionando una breve explicación sobre la mecánica del juego y los objetivos del jugador. -->
+
+    <ReleaseDate>2021-10-20</ReleaseDate>
+    <!-- Fecha de lanzamiento del juego en formato año-mes-día. -->
+
+    <Platforms>
+        <!-- Nodo <Platforms> que contiene las plataformas en las que el juego está disponible. -->
+        <Platform>PC</Platform>
+        <!-- El juego está disponible para PC. -->
+        <Platform>Xbox</Platform>
+        <!-- También está disponible para Xbox. -->
+        <Platform>Android</Platform>
+        <!-- Y para Android. -->
+        <Platform>iOS</Platform>
+        <!-- Además, para iOS (sistemas Apple como iPhone y iPad). -->
+    </Platforms>
+
+    <Genres>
+        <!-- Nodo <Genres> que contiene los géneros del juego. -->
+        <Genre>Acción</Genre>
+        <!-- Género: Acción. -->
+        <Genre>Roguelike</Genre>
+        <!-- Género: Roguelike, un subgénero de juegos de rol caracterizado por su dificultad y elementos aleatorios. -->
+        <Genre>Supervivencia</Genre>
+        <!-- Género: Supervivencia, en el cual el jugador debe sobrevivir el mayor tiempo posible. -->
+    </Genres>
+
+    <Characters>
+        <!-- Nodo <Characters> que contiene la lista de personajes jugables. -->
+        
         <Character>
+            <!-- Un personaje, en este caso "Antonio". -->
+            <Name>Antonio</Name>
+            <!-- Nombre del personaje. -->
+            <Description>Un cazador de vampiros armado con un látigo que aumenta su daño a medida que sube de nivel.</Description>
+            <!-- Descripción de las habilidades y rol del personaje en el juego. -->
+            <StartingWeapon>Látigo</StartingWeapon>
+            <!-- Arma inicial con la que empieza el personaje. -->
+            <Imagen name="Antonio" image="antonio.png"/>
+            <!-- Imagen asociada al personaje, con los atributos 'name' e 'image' para la referencia de la imagen. -->
+        </Character>
+
+        <Character>
+            <!-- Otro personaje, "Imelda". -->
             <Name>Imelda</Name>
             <Description>Un hechicera con habilidades mágicas, que empieza con una varita mágica y mejora la experiencia ganada.</Description>
             <StartingWeapon>Varita mágica</StartingWeapon>
             <Imagen name="imelda" image="imelda.png"/>
         </Character>
+
         <Character>
+            <!-- Otro personaje, "Poe". -->
             <Name>Poe</Name>
             <Description>Un anciano alquimista, inicia con el ajo como arma y tiene una mayor recuperación de vida.</Description>
             <StartingWeapon>Ajo</StartingWeapon>
             <Imagen name="poe" image="poe.png"/>
         </Character>
-        <!-- Se pueden añadir más personajes según sea necesario -->
+
+        <!-- Aquí se pueden añadir más personajes si es necesario. -->
     </Characters>
+
     <Abilities>
+        <!-- Nodo <Abilities> que contiene las habilidades disponibles en el juego. -->
+        
         <Ability>
+            <!-- Habilidad de un personaje, en este caso el "Látigo". -->
             <Name>Látigo</Name>
+            <!-- Nombre de la habilidad. -->
             <Description>Un arma cuerpo a cuerpo que golpea en un área frente al personaje, con mejoras de alcance y daño.</Description>
+            <!-- Descripción de lo que hace la habilidad. -->
             <Effect>Aumenta el daño con cada mejora.</Effect>
+            <!-- Efecto de la habilidad, en este caso mejora el daño. -->
             <Imagen name="latigo" image="latigo.png"/>
+            <!-- Imagen asociada a la habilidad. -->
         </Ability>
+
         <Ability>
+            <!-- Habilidad "Varita mágica". -->
             <Name>Varita mágica</Name>
             <Description>Dispara automáticamente al enemigo más cercano.</Description>
             <Effect>Aumenta la velocidad de disparo y el número de proyectiles.</Effect>
             <Imagen name="varita" image="varita.png"/>
         </Ability>
+
         <Ability>
+            <!-- Habilidad "Ajo". -->
             <Name>Ajo</Name>
             <Description>Crea un aura de daño que afecta a los enemigos cercanos.</Description>
             <Effect>Aumenta el radio y el daño con cada mejora.</Effect>
             <Imagen name="ajo" image="ajo.png"/>
         </Ability>
-        <!-- Se pueden añadir más habilidades según sea necesario -->
+
+        <!-- Aquí también se pueden añadir más habilidades si es necesario. -->
     </Abilities>
+
     <Imagenes>
+        <!-- Nodo <Imagenes> que contiene una imagen adicional del juego, como un banner. -->
         <Imagen name="Imagen1" image="bannervampire.png"/>
     </Imagenes>
-    <Formulario>
-    <Campo>
-        <Label>Nombre</Label>
-        <Tipo>text</Tipo>
-        <Nombre>nombre</Nombre>
-        <Requerido>sí</Requerido>
-    </Campo>
-    <Campo>
-        <Label>Correo Electrónico</Label>
-        <Tipo>email</Tipo>
-        <Nombre>correo</Nombre>
-        <Requerido>sí</Requerido>
-    </Campo>
-    <Campo>
-        <Label>Mensaje</Label>
-        <Tipo>textarea</Tipo>
-        <Nombre>mensaje</Nombre>
-        <Requerido>no</Requerido>
-    </Campo>
-</Formulario>
+
 </Game>

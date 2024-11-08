@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración de XML, indicando que este archivo está en formato XML y utiliza la codificación UTF-8. -->
+
 <?xml-stylesheet type="text/xsl" href="formulario.xslt"?>
+<!-- Instrucción de procesamiento (PI) que vincula este archivo XML a una hoja de estilo XSLT llamada "formulario.xslt". -->
+<!-- Esto permite que el archivo XML sea transformado en un formato HTML o similar usando las reglas definidas en el archivo XSLT. -->
+
 <Formulario>
+    <!-- Elemento raíz que envuelve todos los campos del formulario. -->
+    
     <Campo>
+        <!-- Primer campo del formulario. -->
         <Label>Nombre</Label>
+        <!-- Etiqueta que se mostrará en el formulario. En este caso, "Nombre". -->
         <Tipo>text</Tipo>
+        <!-- Tipo del campo, que indica que se espera una entrada de texto. -->
         <Nombre>nombre</Nombre>
+        <!-- Nombre del campo, que será utilizado para referirse a este campo en el backend o en el proceso de envío. -->
         <Requerido>sí</Requerido>
+        <!-- Indica si este campo es obligatorio para enviar el formulario. En este caso, es obligatorio ("sí"). -->
     </Campo>
+    
     <Campo>
+        <!-- Segundo campo del formulario. -->
         <Label>Correo Electrónico</Label>
+        <!-- Etiqueta que se mostrará en el formulario. En este caso, "Correo Electrónico". -->
         <Tipo>email</Tipo>
+        <!-- Tipo del campo, que indica que se espera una dirección de correo electrónico. -->
         <Nombre>correo</Nombre>
+        <!-- Nombre del campo para hacer referencia a este campo. -->
         <Requerido>sí</Requerido>
+        <!-- Indica que este campo también es obligatorio ("sí"). -->
     </Campo>
+
     <Campo>
+        <!-- Tercer campo del formulario. -->
         <Label>Mensaje</Label>
+        <!-- Etiqueta para el campo "Mensaje". -->
         <Tipo>textarea</Tipo>
+        <!-- Tipo del campo, que indica que este campo será un área de texto, es decir, un campo donde se puede escribir más de una línea. -->
         <Nombre>mensaje</Nombre>
+        <!-- Nombre del campo para referirse a él. -->
         <Requerido>no</Requerido>
+        <!-- Indica que este campo no es obligatorio para el envío del formulario ("no"). -->
     </Campo>
+    
 </Formulario>
+<!-- Cierre del elemento raíz "Formulario" -->
