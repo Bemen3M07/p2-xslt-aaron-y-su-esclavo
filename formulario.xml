@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="formulario.xslt"?>
+<Formulario>
+    <Campo>
+        <Label>Nombre</Label>
+        <Tipo>text</Tipo>
+        <Nombre>nombre</Nombre>
+        <Requerido>sí</Requerido>
+    </Campo>
+    <Campo>
+        <Label>Correo Electrónico</Label>
+        <Tipo>email</Tipo>
+        <Nombre>correo</Nombre>
+        <Requerido>sí</Requerido>
+    </Campo>
+    <Campo>
+        <Label>Mensaje</Label>
+        <Tipo>textarea</Tipo>
+        <Nombre>mensaje</Nombre>
+        <Requerido>no</Requerido>
+    </Campo>
+</Formulario>

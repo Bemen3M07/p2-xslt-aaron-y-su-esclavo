@@ -11,16 +11,28 @@
                     h1, h2, h3 { color: #f1e247; margin: 0; padding: 10px 0; }
                     .section { margin: 10px 0; padding: 0 10px; }
                     .character { margin: 5px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; color: #000; background-color: #ffffff; }
-                    .ability { margin: 5px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; color: #000;}
+                    .ability { margin: 5px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; color: #000; }
                     .character h3, .ability h3 { margin: 0; color: #003366; }
-                    .character img { max-width: 100px; height: auto; margin-top: 10px; }
+                    .character img, .ability img { max-width: 100px; height: auto; margin-top: 10px; }
+                    .form-section { margin: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #ffffff; color: #000; }
+                    .form-section label, .form-section input, .form-section textarea, .form-section button {
+                        display: block; width: 100%; margin-bottom: 10px; font-family: inherit;
+                    }
+                    .form-section input, .form-section textarea {
+                        padding: 8px; border: 1px solid #ccc; border-radius: 4px;
+                    }
+                    .form-section textarea { height: 80px; }
+                    .form-section button {
+                        padding: 10px 15px; background-color: #003366; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;
+                    }
+                    .form-section button:hover { background-color: #002244; }
                     #footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
                     #site-footer { background-color: #b3d8f1; padding: 1% 0; text-align: center; font-family: Arial, sans-serif; color: #000; }
                     #footer-info p { margin: 0; padding: 5px 0; color: #000000; }
                     #footer-info a { color: #000000; text-decoration: none; margin: 0 2%; }
                     #footer-info a:hover { text-decoration: underline; }
                     .image-container { text-align: center; margin: 10px 0; }
-                    .image-container img { max-width: 10%; height: auto; border: 2px solid #ccc; border-radius: 5px; }
+                    .image-container img { max-width: 100%; height: auto; border: 2px solid #ccc; border-radius: 5px; }
                     #header { background-color: #000; padding: 1% 0; text-align: center; font-family: Arial, sans-serif; }
                     #header h1 { color: #ffffff; font-size: 2em; margin: 0; }
                 </style>
@@ -28,6 +40,10 @@
             <body>
                 <header id="header">
                     <h1>VAMPIRE SURVIVORS</h1>
+                        <div style="margin-top: 10px;">
+        <a href="index.html" style="margin-right: 10px; padding: 10px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Página Principal</a>
+        <a href="formulario.xml" style="padding: 10px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Formulario</a>
+    </div>
                 </header>
                 
                 <!-- Imagen principal -->
@@ -93,6 +109,27 @@
                             </xsl:if>
                         </div>
                     </xsl:for-each>
+                </div>
+
+                <!-- Formulario -->
+                <div class="form-section">
+                    <h2>Formulario de Contacto</h2>
+                    <form action="#" method="post">
+                        <xsl:for-each select="Game/Formulario/Campo">
+                            <label>
+                                <xsl:value-of select="Label" />
+                                <xsl:choose>
+                                    <xsl:when test="Tipo='textarea'">
+                                        <textarea name="{Nombre}" required="{Requerido = 'sí'}"></textarea>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <input type="{Tipo}" name="{Nombre}" required="{Requerido = 'sí'}" />
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </label>
+                        </xsl:for-each>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
 
                 <!-- Footer -->
