@@ -1,4 +1,53 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/G9fQk55K)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=16836884&assignment_repo_type=AssignmentRepo)
-# Empty
-Repositori buit
+<a name="readme-top"></a>
+
+# P2 Aarón Martí y Marc Ruiz
+
+> La web trata sobre el juego *Vampire Survivors*, un juego de acción en tiempo real en el que los jugadores deben sobrevivir a hordas de monstruos mientras mejoran sus habilidades y armas. El sitio incluye información sobre el juego y un formulario de contacto para los usuarios.
+
+## Built With
+
+- Html
+- Css
+- XML
+- XLST 
+
+
+## Live Demo (if available)
+
+[Template](https://refactored-space-succotash-7vpwgx944997hr4r7-8000.app.github.dev/vampiresurvivors.xml)
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- Navegador web moderno (Chrome, Firefox, Safari, etc.)
+- Conexión a Internet para acceder a la web
+- Un servidor para alojar la web si se quiere desplegar online (opcional)
+
+### Install
+
+Este proyecto no requiere instalación ni configuraciones adicionales. Solo necesitas un navegador web moderno para visualizar el contenido.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Usage
+
+1.Run project
+
+```sh
+ python -m http.server 8000
+```
+
+## Authors
+
+👤 **Aarón Martí Lucas**
+👤 **Marc Ruiz García**
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
