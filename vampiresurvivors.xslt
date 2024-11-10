@@ -35,11 +35,11 @@
                         padding: 10px 15px; background-color: #003366; color: #ffffff; border: none; border-radius: 5px; cursor: pointer;
                     }
                     .form-section button:hover { background-color: #002244; }
-                    #footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-                    #site-footer { background-color: #b3d8f1; padding: 1% 0; text-align: center; font-family: Arial, sans-serif; color: #000; }
-                    #footer-info p { margin: 0; padding: 5px 0; color: #000000; }
-                    #footer-info a { color: #000000; text-decoration: none; margin: 0 2%; }
-                    #footer-info a:hover { text-decoration: underline; }
+                     footer { background-color: yellow; padding: 2% 5%; text-align: center; color: black; }
+                    .footer-content { display: flex; flex-direction: column; align-items: center; }
+
+                    .
+                    .footer-content div { margin: 1% 0; }
                     .image-container { text-align: center; margin: 10px 0; }
                     .image-container img { max-width: 100%; height: auto; border: 2px solid #ccc; border-radius: 5px; }
                     #header { background-color: #000; padding: 1% 0; text-align: center; font-family: Arial, sans-serif; }
@@ -143,14 +143,11 @@
                 </div>
 
                 <!-- Footer -->
-                <footer id="site-footer">
-                    <div id="footer-content">
-                        <div id="footer-info">
-                            <p>2024 FPS Games. Todos los derechos reservados.</p>
+                <footer id="footer-content">
+                  
+                            <p>2024 VAMPIRE SURVIVORS. Todos los derechos reservados.</p>
                             <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
                             <!-- Muestra la información del pie de página, incluyendo el aviso de derechos reservados y enlaces a políticas. -->
-                        </div>
-                    </div>
                 </footer>
             </body>
         </html>
